@@ -4,7 +4,7 @@ import re
 
 
 class SublimeOnSaveBuild(sublime_plugin.EventListener):
-    def on_post_save(self, view):
+    def on_post_save_async(self, view):
         global_settings = sublime.load_settings(self.__class__.__name__+'.sublime-settings')
 
         # See if we should build. A project level build_on_save setting
